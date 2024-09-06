@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires de Création de Compte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <form id="createAccount">
+            <h2>Create an account</h2>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom">
+            <div id="nomError" class="error"></div>
+            <br />
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom">
+            <div id="prenomError" class="error"></div>
+            <br />
+            <label for="email">Email :</label>
+            <input type="email" id="email">
+            <div id="emailError" class="error"></div>
+            <br />
+            <button type="button" onclick="suivant()">Suivant</button>
+        </form>
+        <form id="continueCreateAccount" style="display: none; ">
+            <h2>Continue widh.</h2>
+            <label for="password">Mot de passe :</label>
+            <br />
+            <input type="password" id="password">
+            <div id="passwordError" class="error"></div>
+            <br />
+            <label for="confirmPassword">Confirmez le mot de passe :</label>
+            <input type="password" id="confirmPassword">
+            <div id="confirmPasswordError" class="error"></div>
+            <br />
+            <input type="checkbox" id="showPassword" onclick="toggleVisibility()"> Afficher le mot de passe
+            <br />
+            <button type="button" onclick="retour()">Retour</button>
+            <button type="button" onclick="confirmer()">Confirmer</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
